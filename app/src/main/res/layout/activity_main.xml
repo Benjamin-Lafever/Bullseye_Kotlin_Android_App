@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/instructionTextView"
+        android:layout_width="278dp"
+        android:layout_height="27dp"
+        android:text="@string/instruction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".20" />
+
+    <TextView
+        android:id="@id/targetTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/playerSelectSeekBar"
+        app:layout_constraintEnd_toEndOf="@+id/instructionTextView"
+        app:layout_constraintHorizontal_bias=".50"
+        app:layout_constraintStart_toStartOf="@+id/instructionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/instructionTextView" />
+
+    <SeekBar
+        android:id="@+id/playerSelectSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/maxValueView"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toEndOf="@+id/minValueView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/minValueView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/min_value"
+        app:layout_constraintBottom_toBottomOf="@+id/playerSelectSeekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/playerSelectSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/playerSelectSeekBar" />
+
+    <TextView
+        android:id="@+id/maxValueView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/max_value"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/playerSelectSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/playerSelectSeekBar"
+        app:layout_constraintTop_toTopOf="@+id/playerSelectSeekBar" />
+
+    <Button
+        android:id="@+id/hitMeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hit_me_button_text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/playerSelectSeekBar"
+        app:layout_constraintHorizontal_bias=".50"
+        app:layout_constraintStart_toStartOf="@+id/playerSelectSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/playerSelectSeekBar"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <Button
+        android:id="@+id/startOverButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_over"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <Button
+        android:id="@+id/infoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info"
+        tools:layout_editor_absoluteX="558dp"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <LinearLayout
+        android:id="@+id/scoreGroup"
+        android:layout_width="347dp"
+        android:layout_height="102dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="308dp">
+
+        <TextView
+            android:id="@+id/gameScoreLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/gameScoreTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
